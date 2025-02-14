@@ -174,3 +174,5 @@ class IsLargerManager {
 		}
 	}
 }
+
+taskList.push(IsLargerManager.createTask);

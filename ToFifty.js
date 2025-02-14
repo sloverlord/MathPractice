@@ -148,3 +148,5 @@ class ToFiftyManager {
 		}
 	}
 }
+
+taskList.push(ToFiftyManager.createTask);

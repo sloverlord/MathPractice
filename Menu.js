@@ -21,16 +21,9 @@ class MainMenuManager {
 	}
 	
 	static setup(){
-		CountingManager.createTask();
-		MultiplicationManager.createTask();
-		NextTenManager.createTask();
-		ToNextManager.createTask();
-		ToFiftyManager.createTask();
-		ToTimeManager.createTask();
-		IsLargerManager.createTask();
-		AddingManager.createTask();
-		TrippleAddingManager.createTask();
-		SubtractingManager.createTask();
+		for (var i = 0; i < taskList.length; i += 1){
+			taskList[i]();
+		}
 	}
 	
 	static loop (){

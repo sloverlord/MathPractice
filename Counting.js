@@ -179,3 +179,5 @@ class CountingManager {
 		}
 	}
 }
+
+taskList.push(CountingManager.createTask);

@@ -156,3 +156,5 @@ class MultiplicationManager {
 		}
 	}
 }
+
+taskList.push(MultiplicationManager.createTask);

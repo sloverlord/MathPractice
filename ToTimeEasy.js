@@ -229,3 +229,5 @@ class ToTimeManager {
 		}
 	}
 }
+
+taskList.push(ToTimeManager.createTask);

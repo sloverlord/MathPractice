@@ -17,6 +17,8 @@ var imgScale;
 
 var bgColor = "white";
 
+var taskList = [];
+
 window.onload = function() {
 //	loadImages();
 	

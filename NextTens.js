@@ -147,3 +147,5 @@ class NextTenManager {
 		}
 	}
 }
+
+taskList.push(NextTenManager.createTask);

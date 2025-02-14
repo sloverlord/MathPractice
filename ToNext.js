@@ -147,3 +147,5 @@ class ToNextManager {
 		}
 	}
 }
+
+taskList.push(ToNextManager.createTask);
