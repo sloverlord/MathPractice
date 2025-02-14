@@ -162,4 +162,4 @@ class TrippleAddingManager {
 	}
 }
 
-taskList.push(TrippleAddingManager.createTask);
+//taskList.push(TrippleAddingManager.createTask);
