@@ -161,4 +161,4 @@ class AddingManager {
 	}
 }
 
-taskList.push(AddingManager.createTask);
+//taskList.push(AddingManager.createTask);
