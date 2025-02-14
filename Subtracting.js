@@ -161,4 +161,4 @@ class SubtractingManager {
 	}
 }
 
-taskList.push(SubtractingManager.createTask);
+//taskList.push(SubtractingManager.createTask);
