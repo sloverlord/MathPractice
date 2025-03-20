@@ -86,9 +86,10 @@ class IsLargerManager {
 			IsLargerManager.log.unshift([WRONG, toCheck]);
 			IsLargerManager.currAns = "";
 			if (IsLargerManager.correctCount > 0){
-				IsLargerManager.wrongCount = IsLargerManager.correctCount;
-				IsLargerManager.correctCount = 0;
+				IsLargerManager.wrongCount += 2;
+				IsLargerManager.correctCount -= 2;
 			}
+			IsLargerManager.nextProblem();
 		}
 	}
 	
