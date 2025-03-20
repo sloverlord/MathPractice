@@ -31,7 +31,7 @@ class IsLargerManager {
 	static setup(){
 		IsLargerManager.correctCount = 0;
 		IsLargerManager.toAnswer = 10;
-		IsLargerManager.nextProblem();
+		IsLargerManager.nextProblem(0);
 	}
 	
 	static loop(){
@@ -81,7 +81,7 @@ class IsLargerManager {
 		if (toCheck == Math.max(IsLargerManager.num1, IsLargerManager.num2)){
 			IsLargerManager.correctCount += 1;
 			IsLargerManager.log.unshift([RIGHT, toCheck]);
-			IsLargerManager.nextProblem();
+			IsLargerManager.nextProblem(0);
 		} else {
 			IsLargerManager.log.unshift([WRONG, toCheck]);
 			IsLargerManager.currAns = "";
@@ -89,18 +89,18 @@ class IsLargerManager {
 				IsLargerManager.wrongCount += 2;
 				IsLargerManager.correctCount -= 2;
 			}
-			IsLargerManager.nextProblem();
+			IsLargerManager.nextProblem(IsLargerManager.wrongCount);
 		}
 	}
 	
-	static nextProblem(){
+	static nextProblem(wrongs){
 		if (IsLargerManager.correctCount == IsLargerManager.toAnswer && !IsLargerManager.finished){
 			IsLargerManager.finished = true;
 			CompletedManager.activate(IsLargerManager.taskName);
 		}
 		
 		IsLargerManager.currAns = "";
-		IsLargerManager.wrongCount = 0;
+		IsLargerManager.wrongCount = wrongs;
 		
 		var maxNum = Math.ceil(Math.random() * 1000);
 		IsLargerManager.num1 = IsLargerManager.getNextNum(maxNum);
