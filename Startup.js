@@ -34,7 +34,7 @@ window.onload = function() {
 	
 	ctx = canv.getContext("2d");
 	
-	window.addEventListener("blur", onBlurFunc);
+	window.addEventListener("blur", () => onBlurFunc);
 	
 	load();
 	
