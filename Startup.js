@@ -80,7 +80,6 @@ function loadImages(imagePaths){
 	return imgObjs;
 }
 
-function onBlurFunc(evt){
-	console.log(evt.keyCode);
+function onBlurFunc(){
 	bgColor = "red";
 }
