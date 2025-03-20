@@ -34,9 +34,7 @@ window.onload = function() {
 	
 	ctx = canv.getContext("2d");
 	
-	window.addEventListener("blur", () => {
-		bgColor = "red";
-	});
+	window.addEventListener("blur", onBlurFunc);
 	
 	load();
 	
@@ -80,4 +78,9 @@ function loadImages(imagePaths){
 	}
 	
 	return imgObjs;
+}
+
+function onBlurFunc(evt){
+	console.log(evt.keyCode);
+	bgColor = "red";
 }
