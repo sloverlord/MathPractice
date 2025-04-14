@@ -51,7 +51,7 @@ class MainMenuManager {
 		}
 
 		var completed = 0;
-		for (var i = 0; i < MainMenuManager.options.length; i += 1){ if (MainMenuManager.options[i][1] == RIGHT){ completed += 1; }
+		for (var i = 0; i < MainMenuManager.options.length; i += 1){ if (MainMenuManager.options[i][1] == RIGHT){ completed += 1; } }
 		
 		var completionRate = completed/MainMenuManager.options.length;
 		if (completionRate == 1){
