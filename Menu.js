@@ -43,14 +43,15 @@ class MainMenuManager {
 		ctx.textAlign = "left";
 		ctx.fillStyle = "black";
 		var startPoint = 3.23
-		var completed = 0;
 		for (var i = 0; i <= MainMenuManager.toShow; i += 1){
 			ctx.drawImage(imageList[MainMenuManager.options[i + MainMenuManager.listStart][1]], colSize * 1.5, rowSize * (startPoint + i + .25), imgScale, imgScale);
 			ctx.fillText(MainMenuManager.options[i + MainMenuManager.listStart][0], colSize * 2.25, rowSize * (startPoint + i + 1));
 			
-			if (MainMenuManager.options[i][1] == RIGHT){ completed += 1; }
 			if (MainMenuManager.selector - MainMenuManager.listStart == i){ ctx.drawImage(imageList[INDICATOR], colSize * 1.5, rowSize * (startPoint + i + .25), imgScale, imgScale); }
 		}
+
+		var completed = 0;
+		for (var i = 0; i < MainMenuManager.options.length; i += 1){ if (MainMenuManager.options[i][1] == RIGHT){ completed += 1; }
 		
 		var completionRate = completed/MainMenuManager.options.length;
 		if (completionRate == 1){
