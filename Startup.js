@@ -25,11 +25,11 @@ window.onload = function() {
 	canv = document.getElementById("gc");
 	canv.width = window.innerWidth-30;
 	canv.height = window.innerHeight-30;
-	
-	if (canv.width * 21 < canv.height * 10){
-		canv.height = canv.width * 10 / 21;
+
+	if (canv.width / 16 < canv.height / 9){
+		canv.height = canv.width / 16 * 9;
 	} else {
-		canv.width = canv.height * 21 / 10;
+		canv.width = canv.height / 9 * 16;
 	}
 	
 	ctx = canv.getContext("2d");
